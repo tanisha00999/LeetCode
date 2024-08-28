@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+
+        if(x<0)
+        return false;
+
+        int remainder , quotient;
+        long long result =0;
+        long long y=x;
+        while(y!=0)
+        {
+            remainder = y%10;
+            result = result*10 + remainder;
+            y = y/10;
+        }
+
+        return x==result;
+        
+    }
+};
